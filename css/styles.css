@@ -1,39 +1,42 @@
 body {
   font-family: 'Montserrat';
+  text-align: center;
 }
 
-#title {
-  background-color: #ff4c68;
-  color: #fff;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat';
 }
 
-h1 {
+p {
+  color: #8f8f8f;
+}
+
+/* Headings */
+.big-heading {
   font-family: 'Montserrat';
   font-weight: 900;
   font-size: 3.5rem;
   line-height: 1.5;
 }
 
-h2{
-  font-family: 'Montserrat';
-  font-weight: 600;
+.section-heading {
   font-size: 3rem;
   line-height: 1.5;
 }
 
-h3 {
-  font-family: 'Montserrat';
-  font-weight: 700;
-  font-size: 1.5rem;
-  color: #000;
-}
-
-p{
-  color: #8f8f8f;
-}
-
+/* Containers */
 .container-fluid {
-  padding: 3% 15%;
+  padding: 7% 15%;
+}
+
+/* Sections */
+.colored-section {
+  background-color: #ff4c68;
+  color: #fff;
+}
+
+.white-section {
+  background-color: #fff;
 }
 
 /* Navigation Bar */
@@ -64,10 +67,19 @@ p{
   margin-right: 5px;
 }
 
+/* Title Section */
+#title .container-fluid {
+  padding: 3% 15%;
+  text-align: left;
+}
+
 /* Title Image*/
 .iphone-image {
   width: 60%;
   transform: rotate(25deg);
+  z-index: 0;
+  position: absolute;
+  right: 30%;
 }
 
 .row {
@@ -81,12 +93,15 @@ p{
 
 /* Features Section */
 #features {
-  padding: 7% 15%;
+  position: relative;
 }
 
-.feature-box{
-  text-align: center;
-  padding: 5%;
+.feature-box {
+  padding: 4.5%;
+}
+
+.feature-title {
+  font-size: 1.5rem;
 }
 
 .feature-images {
@@ -94,46 +109,63 @@ p{
   margin-bottom: 1rem;
 }
 
-.feature-images:hover{
+.feature-images:hover {
   color: #ff4c68;
 }
 
 /* Testimonial Section  */
-#testimonials{
-  text-align: center;
+#testimonials {
   background-color: #ef8172;
-  color: #fff;
 }
 
-.carousel-item{
-  padding: 7% 15%;
+.testimonial-text {
+  font-size: 3rem;
+  line-height: 1.5;
 }
 
-.testimonial-image{
+.testimonial-image {
   width: 10%;
   border-radius: 100%;
   margin: 20px;
 }
 
-
 /* Press Section */
-#press{
+#press {
   background-color: #ef8172;
-  text-align: center;
   padding-bottom: 3%;
 }
 
-.press-image{
+.press-image {
   width: 15%;
   margin: 20px 20px 50px;
 }
 
 /* Pricing Section */
-#pricing{
+#pricing {
   padding: 100px;
-  text-align: center;
 }
 
-.pricing-col{
+.price-text {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.pricing-col {
   padding: 3% 2% 2%;
+}
+
+/* Footer Section */
+.footer-image {
+  margin: 20px 10px;
+}
+
+@media (max-width: 1028px) {
+  #title {
+    text-align: center;
+  }
+
+  .iphone-image {
+    position: static;
+    transform: rotate(0deg);
+  }
 }
